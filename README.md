@@ -1,5 +1,5 @@
 # Google-Apps-Scripts
-A collection of Google scripts for various purposes.
+A collection of Google Apps scripts.
 
 # Scripts
 * Re-survey Columns D & E:
