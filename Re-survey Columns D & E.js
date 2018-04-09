@@ -1,10 +1,10 @@
 /**
  * "Vote for the best Google Form response(s) in columns D & E"
- * 
+ *
  * Description:
  * This script helps users vote-up the best responses to an existing Google Form.
- * From a spreadsheet tracking the existing Google Form's responses, the script 
- * will generate a new Google Form asking which of the values from columns 
+ * From a spreadsheet tracking the existing Google Form's responses, the script
+ * will generate a new Google Form asking which of the values from columns
  * D and E were most valuable.
  *
  * Requirements:
@@ -15,7 +15,7 @@
  *
  * Usage:
  * (A) Add this code to a Google spreadsheet meeting the requirements above.
- * (B) Re-open the spreadsheet.  Make sure you are viewing the sheet about 
+ * (B) Re-open the spreadsheet.  Make sure you are viewing the sheet about
  * which you wish to re-survey.
  * (C) From the "survey" menu, choose the option "Set up new survey."
  *
@@ -30,7 +30,7 @@
  */
 
 /**
- * Copyright 2017
+ * Copyright 2018 jcoffeepot
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -65,7 +65,7 @@ function onOpen(e) {
 
 /**
  * A set-up function that uses the survey data in the spreadsheet to create
- * a Google Form and a trigger that allows the script to react to form 
+ * a Google Form and a trigger that allows the script to react to form
  * responses.
  */
 function setUpSurvey_() {
@@ -73,22 +73,22 @@ function setUpSurvey_() {
   var sheet = ss.getSheetByName('Form Responses 1');
   var range = sheet.getDataRange();
   var values = range.getValues();
-  setUpForm_(ss, values); 
+  setUpForm_(ss, values);
 }
 
 /**
  * Creates a Google Form that allows respondents to select which comments
- * they found most useful, out of the comments listed in column C in the 
+ * they found most useful, out of the comments listed in column C in the
  * source survey data.
  */
 function setUpForm_(ss, values) {
   // get spreadsheet name
   var spreadsheetName = ss.getName();
-  
+
   // get current date and time
   var d = new Date();
   var currentTime = d.toLocaleTimeString();
-  
+
   // put "like" comments into an array
   // Comments in column C?  Use 'values[i][2].'  D?  Use 'values[i][3].'   Etc.
   var likeComments = [];
@@ -97,17 +97,17 @@ function setUpForm_(ss, values) {
       likeComments[i-1] = (values[i][3]);
     }
   }
-  
+
   // put "dislike" comments into an array
   // Comments in column D?  Use 'values[i][3].'  E?  Use 'values[i][4].'   Etc.
   var dislikeComments = [];
   for (var i = 0; i < values.length; i++) {
     if (i > 0) {
-      dislikeComments[i-1] = (values[i][4]);     
+      dislikeComments[i-1] = (values[i][4]);
     }
   }
-  
-  // Create the form and add a multiple-choice question 
+
+  // Create the form and add a multiple-choice question
   var form = FormApp.create('Survey Response Voting');
   form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId())
     .setPublishingSummary(true);
