@@ -7,4 +7,4 @@ Creates a new Google Form for upvoting comments previously collected in "Form Re
 More information at https://chrome.google.com/webstore/detail/re-survey-columns-d-e/klaemlppbiclofghlkngognlejpalcdn.
 
 # License
-The content of this repository is licensed according to an [Apache 2.0 License](https://github.com/jcoffeepot/Google-Apps-Scripts/blob/master/LICENSE).
+The content of this repository is licensed according to an [Apache License 2.0](https://github.com/jcoffeepot/Google-Apps-Scripts/blob/master/LICENSE).
