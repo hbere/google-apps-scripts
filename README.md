@@ -1,6 +1,9 @@
 # Google-Apps-Scripts
 A collection of Google Apps scripts.
 
+# Quickstart
+Following the instructions located [here](https://chrome.google.com/webstore/detail/re-survey-columns-d-e/klaemlppbiclofghlkngognlejpalcdn).
+
 # Scripts
 * Re-survey Columns D & E:
 Creates a new Google Form for upvoting comments previously collected in "Form Responses 1" columns D & E.
