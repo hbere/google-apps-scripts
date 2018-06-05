@@ -5,3 +5,6 @@ A collection of Google Apps scripts.
 * Re-survey Columns D & E:
 Creates a new Google Form for upvoting comments previously collected in "Form Responses 1" columns D & E.
 More information at https://chrome.google.com/webstore/detail/re-survey-columns-d-e/klaemlppbiclofghlkngognlejpalcdn.
+
+# License
+The content of this repository is licensed according to an [Apache 2.0 License](https://github.com/jcoffeepot/Google-Apps-Scripts/blob/master/LICENSE).
