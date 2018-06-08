@@ -2,7 +2,7 @@
 A collection of Google Apps scripts.
 
 # Quickstart
-Following the instructions located [here](https://chrome.google.com/webstore/detail/re-survey-columns-d-e/klaemlppbiclofghlkngognlejpalcdn).
+Follow the instructions located [here](https://chrome.google.com/webstore/detail/re-survey-columns-d-e/klaemlppbiclofghlkngognlejpalcdn).
 
 # Scripts
 * Re-survey Columns D & E:
